@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+    <div id="cart-items">
+        <!-- Aquí se agregarán los productos del carrito -->
+    </div>
+    <div id="total-price">
+        <h2>Total: $<span id="total">0.00</span></h2>
+    </div>
+    <button class="checkout" onclick="proceedToCheckout()">Proceder al Pago</button>
+
+
+    <script src="js/script.js"></script>
+    
+   <script>
+    function proceedToCheckout() {
+        const total = document.getElementById('total').textContent;
+        window.location.href = `pagar.html?total=${total}`;
+    }
+</script>
+</body>
+
+
+<section class= "section context-dark footer-modern-2">
+        <div class="footer-modern-line">
+            <div class="container">
+                <div class="row row-50">
+                    <div class="col-md-6 col-lg-4">
+                        <h5 class="footer-modern-title"><span class="d-inline-block">Información</span></h5>
+                        <ul class="footer-modern-list">
+                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="#">Colección</a></li>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-modern-line-2">
+            <div class="container">
+                <div class="row row-30 align-items-center">
+                    <div class="col-md-6 col-lg-4">
+                        <a class="brand" href="index.html"><img src="imagenes/LOGO TORRES TREND.png"
+                                alt="Logo Torres Trend" width="729" height="546" /></a>
+                    </div>
+                    <div class="col-md-6 col-lg-8">
+                        <div class="footer-modern-contacts">
+                            <div class="unit unit-spacing-sm align-items-center">
+                            <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span> <a class="unit-body"><a class="phone" href="tel:#">3215243923</a></div>
+                            </div>
+                            <div class="unit unit-spacing-sm align-items-center">
+                                <div class="unit-left"><span class="icon mdi mdi-email"></span><a class="unit-body"><a class="mail"href="mailto:Torres_trend@gmail.com">Torres_trend@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-modern-line-3">
+            <div class="container">
+                <div class="row row-10 justify-content-between">
+                    <div class="col-md-6"><span>Envios a Todo el país</span></div>
+                    <div class="col-md-auto">
+                        <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year">Torres_trend</span><span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+</footer>
+    <script src="js/html5shiv.min.js"></script>
+</body>
+</html>
+
+    
+</html>

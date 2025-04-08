@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="es">
+
+<head>
+    <title>Torres Trend</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css"
+        href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="styleSheet" href="n-carousel.min.css">
+    <script src="n-carousel.min.js" type="module"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header-primary">
+            <div>
+                <div class="container-image-header">
+                    <a class="brand" href="index.html">
+                        <img src="imagenes/LOGO TORRES TREND.png" alt="logo">
+                    </a>
+                </div>
+                <nav class="nav-header is-desktop">
+                        <ul>
+                            <li class="active"><a class="rd-nav-link" href="index.html">Inicio</a>
+                            </li>
+                            <li class=""><a class="rd-nav-link" href="women.html">Mujeres</a></li>
+                            <li class=""><a class="rd-nav-link" href="men.html">Hombres</a></li>
+                            <li class=""><a class="rd-nav-link" href="contacto">Contacto</a></li>
+                            <li class=""><a class="rd-nav-link" href="cart.html">Carrito</a></li>
+                        </ul>
+                        <a class="close-hamburger">x</a>
+                </nav>
+                <nav class="nav-header is-mobile">
+                    <a id="btn-hamburger">
+                        <img src="imagenes/icons/icons-h.png" alt="icon" />
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="banner-primary-category">
+                <div class="item-banner">
+                    <div class="services-terri-figure">
+                        <img src="imagenes/Banner_Mujer_Voie.webp" alt="Categoría Mujer">
+                    </div>
+                    <div class="container-text">
+                        <h5 class="services-terri-title"><a href="#">MUJER</a></h5>
+                    </div>
+                </div>
+                <div class="item-banner">
+                        <div class="services-terri-figure">
+                            <img src="imagenes/Banner_Hombre_scalpers_spring_summer_8e4b5aee-9018-46b9-9906-09797a39ff08.webp" alt="Categoría Hombre" />
+                        </div>
+                        <div class="container-text">
+                            <h5 class="services-terri-title"><a href="#">HOMBRE</a></h5>
+                        </div>
+                </div>
+        </section>
+    </div>
+    <section class="section section-lg bg-default">
+        <div class="container">
+            <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">PRODUCTOS POPULARES</span></h3>
+            <div class="row row-lg row-30">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <article class="product wow fadeInLeft" data-wow-delay=".15s">
+                        <div class="product-figure"><img src="imagenes/vestido mujer verde.jpg"
+                                alt="Vestido de Fiesta Verde" width="246" height="317"></div>
+                        <h6 class="product-title">Vestido de Fiesta Verde con Abertura</h6>
+                        <div class="product-price-wrap">
+                            <div class="product-price">$98,000</div>
+                        </div>
+                        <div class="product-button">
+                            <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#"
+                                    onclick="addToCart({name: 'Vestido de Fiesta Verde', price: 98000})">AÑADIR A LA
+                                    CESTA</a></div>
+                            <div class="button-wrap"><a class="button button-xs button-secondary button-winona"
+                                    href="#">VER PRODUCTO</a></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <article class="product wow fadeInLeft" data-wow-delay=".1s">
+                        <div class="product-figure"><img src="imagenes/Camisa Negra Hombre.jpg"
+                                alt="Camisa Negra Casual" width="336" height="447"></div>
+                        <h6 class="product-title">Camisa negra casual de verano</h6>
+                        <div class="product-price-wrap">
+                            <div class="product-price">$30,000</div>
+                        </div>
+                        <div class="product-button">
+                            <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#"
+                                    onclick="addToCart({name: 'Camisa negra casual', price: 30000})">AÑADIR A LA
+                                    CESTA</a></div>
+                            <div class="button-wrap"><a class="button button-xs button-secondary button-winona"
+                                    href="#">VER PRODUCTO</a></div>
+                        </div>
+                        <span class="product-badge product-badge-new">New</span>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <article class="product wow fadeInLeft" data-wow-delay=".05s">
+                        <div class="product-figure"><img src="imagenes/conjunto 2 mujer.jpg" alt="Conjunto Mujer"
+                                width="336" height="447"></div>
+                        <h6 class="product-title">Camisa crop top y pantalones de pierna ancha</h6>
+                        <div class="product-price-wrap">
+                            <div class="product-price">$40,000</div>
+                        </div>
+                        <div class="product-button">
+                            <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#"
+                                    onclick="addToCart({name: 'Conjunto Mujer', price: 40000})">AGREGAR A LA CESTA</a>
+                            </div>
+                            <div class="button-wrap"><a class="button button-xs button-secondary button-winona"
+                                    href="#">VER PRODUCTO</a></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <article class="product wow fadeInLeft">
+                        <div class="product-figure"><img src="imagenes/blazer y pantalon Hombre.jpg"
+                                alt="Conjunto de Traje" width="336" height="447"></div>
+                        <h6 class="product-title">Conjunto de traje</h6>
+                        <div class="product-price-wrap">
+                            <div class="product-price product-price-old">$315,000</div>
+                            <div class="product-price">$164,000</div>
+                        </div>
+                        <div class="product-button">
+                            <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#"
+                                    onclick="addToCart({name: 'Conjunto de traje', price: 164000})">AÑADIR A LA
+                                    CESTA</a></div>
+                            <div class="button-wrap"><a class="button button-xs button-secondary button-winona"
+                                    href="#">VER PRODUCTO</a></div>
+                        </div>
+                        <span class="product-badge product-badge-sale">Sale</span>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="Contacto">
+        <section class="section context-dark footer-modern-2">
+            <div class="footer-modern-line">
+                <div class="container">
+                    <div class="row row-50">
+                        <div class="col-md-6 col-lg-4">
+                            <h5 class="footer-modern-title"><span class="d-inline-block">Información</span></h5>
+                            <ul class="footer-modern-list">
+                                <li><a href="#">Sobre Nosotros</a></li>
+                                <li><a href="#">Colección</a></li>
+                                <li><a href="#">Preguntas frecuentes</a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-modern-line-2">
+                <div class="container">
+                    <div class="row row-30 align-items-center">
+                        <div class="col-md-6 col-lg-4">
+                            <a class="brand" href="index.html"><img src="imagenes/LOGO TORRES TREND.png"
+                                    alt="Logo Torres Trend" width="729" height="546" /></a>
+                        </div>
+                        <div class="col-md-6 col-lg-8">
+                            <div class="footer-modern-contacts">
+                                <div class="unit unit-spacing-sm align-items-center">
+                                    <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span> <a
+                                            class="unit-body"><a class="phone" href="tel:#">3215243923</a></div>
+                                </div>
+                                <div class="unit unit-spacing-sm align-items-center">
+                                    <div class="unit-left"><span class="icon mdi mdi-email"></span><a
+                                            class="unit-body"><a class="mail"
+                                                href="mailto:Torres_trend@gmail.com">Torres_trend@gmail.com</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-modern-line-3">
+                <div class="container">
+                    <div class="row row-10 justify-content-between">
+                        <div class="col-md-6"><span>Envios a Todo el país</span></div>
+                        <div class="col-md-auto">
+                            <p class="rights"><span>&copy;&nbsp;</span><span
+                                    class="copyright-year">Torres_trend</span><span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/execute.js"></script>
+</body>
+
+</html>

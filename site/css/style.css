@@ -1,0 +1,334 @@
+/* estilos.css */
+
+* {
+    box-sizing: border-box !important;
+}
+
+html,body {
+    padding: unset;
+    margin: unset 0 !important;
+    box-sizing: border-box;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #fff;
+    padding: 10px 15px;
+    height: auto;
+    overflow: hidden;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.container-image-header {
+    display: flex;
+    overflow: hidden;
+}
+
+header div.container-image-header a {
+    display: flex;
+    height: 70px;
+}
+
+header div.container-image-header img {
+    object-fit: cover;
+}
+
+header .nav-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header .nav-header ul li {
+    margin: unset;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px 10px;
+}
+
+header .nav-header ul li.active a,
+header .nav-header ul li.active {
+   background: #555;
+   color: #fff;
+}
+
+/* Estilos para los títulos */
+h1, h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Secciones */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Estilo para la lista de pasatiempos */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Imagen */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Enlaces */
+a {
+    color: #060606;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/*Cart*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item input {
+    width: 50px;
+    margin-left: 10px;
+}
+
+#total-price {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+button.checkout {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+button.checkout:hover {
+    background-color: darkgreen;
+}
+
+.product {
+    margin-bottom: 10px;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 60%;
+      margin: auto;
+}
+
+.section.swiper-container.swiper-slider {
+    max-width: 1300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rd-nav-link {
+    color: #060606;
+}
+
+/*
+  Styles of category
+*/
+.banner-primary-category {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: unset;
+    margin: unset;
+    overflow: hidden;
+}
+
+.banner-primary-category .item-banner {
+    position: relative;
+    width: 50%;
+}
+
+.banner-primary-category .item-banner .services-terri-figure img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-primary-category .item-banner .container-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #dfcfcf4b;
+    z-index: 99;
+}
+
+.banner-primary-category .item-banner .container-text h5 a {
+    color: #222 !important;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/*
+  Media Query
+**/
+
+@media screen and (min-width: 800px) {
+    .is-desktop {
+        display: flex;
+    }
+    .is-mobile {
+        display: none;
+    }
+    .close-hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .is-desktop {
+        display: none;
+    }
+    .is-mobile {
+        display: flex;
+    }
+
+    header nav.nav-header.is-mobile img {
+        height: 30px;
+        object-fit: cover;
+    }
+
+    header div.container-image-header a {
+        height: 40px;
+    }
+
+    header div.container-image-header img {
+        object-fit: unset;
+        height: 50px;
+    }
+
+    .menu-hamburger {
+        display: flex !important;
+        position: fixed;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+    }
+    
+    .menu-hamburger ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-hamburger ul li {
+        width: 90px;
+        border: 1px solid #333;
+    }
+
+    .close-hamburger {
+        display: flex;
+        cursor: pointer;
+        font-size: 15px;
+        height: 10px;
+        width: 10px;
+    }
+}
