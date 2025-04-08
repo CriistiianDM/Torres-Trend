@@ -1,18 +1,4 @@
 
-// Define btn Hamburger
-const btnHamburger      = document.querySelector('#btn-hamburger')
-const btnCloseHamburger = document.querySelector('.close-hamburger')
-
-btnHamburger.addEventListener('click', (e) => {
-    const menuHiddent = document.querySelector('header nav.nav-header.is-desktop')
-    menuHiddent.classList.add('menu-hamburger')
-})
-
-btnCloseHamburger.addEventListener('click', (e) => {
-    const menuHiddent = document.querySelector('header nav.nav-header.is-desktop')
-    menuHiddent.classList.remove('menu-hamburger')
-})
-
 function transformarProducto(item) {
     return {
       nombre: item.title,
@@ -20,27 +6,20 @@ function transformarProducto(item) {
       imagen: item.image
     };
 }
-
+  
 let productos = [];
 
-Promise.all([
-    fetch("https://fakestoreapi.com/products/category/women's clothing?limit=10")
-        .then(res => res.json()),
-    fetch("https://fakestoreapi.com/products/category/men's clothing?limit=10")
-        .then(res => res.json())
-])
-.then(([mujeresData, hombresData]) => {
-    const productosMujeres = mujeresData.map(transformarProducto);
-    const productosHombres = hombresData.map(transformarProducto);
-
-    productos = productosMujeres.concat(productosHombres);
-    cargarProductos();
-})
+fetch("https://fakestoreapi.com/products/category/women's clothing?limit=20")
+    .then(res => res.json())
+    .then(data => {
+        productos = data.map(transformarProducto);
+        localStorage.setItem('productos', JSON.stringify(productos));
+        cargarProductos();
+    })
 .catch(error => {
     console.error("Error al obtener los productos:", error);
 });
 
-// Función para formatear el precio en pesos colombianos
 function formatearPrecio(precio) {
     return new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -48,9 +27,10 @@ function formatearPrecio(precio) {
     }).format(precio);
 }
 
-// Actualizar Productos
 function cargarProductos() {
     const contenedor = document.querySelector('.popular-products__container');
+
+    contenedor.innerHTML = '';
 
     productos.forEach(producto => {
         const articulo = document.createElement('article');
@@ -58,10 +38,10 @@ function cargarProductos() {
 
         const figura = document.createElement('figure');
         figura.classList.add('product-card__image');
-
         const img = document.createElement('img');
         img.src = producto.imagen;
         img.alt = producto.nombre;
+        figura.appendChild(img);
 
         const nombre = document.createElement('h6');
         nombre.classList.add('product-card__name');
@@ -82,24 +62,14 @@ function cargarProductos() {
         addToCartLink.onclick = () => addToCart(producto);
         addToCartDiv.appendChild(addToCartLink);
 
-        const viewDiv = document.createElement('div');
-        viewDiv.classList.add('product-card__view');
-        const viewLink = document.createElement('a');
-        viewLink.href = '#';
-        viewLink.textContent = 'VER PRODUCTO';
-        viewDiv.appendChild(viewLink);
-
-        figura.appendChild(img);
         acciones.appendChild(addToCartDiv);
-        acciones.appendChild(viewDiv);
-
         articulo.appendChild(figura);
         articulo.appendChild(nombre);
         articulo.appendChild(precio);
         articulo.appendChild(acciones);
 
         contenedor.appendChild(articulo);
-    });
+});
 }
 
 function addToCart(producto) {
@@ -108,3 +78,4 @@ function addToCart(producto) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     alert(`Producto añadido: ${producto.nombre} - ${formatearPrecio(producto.precio)}`);
 }
+  
