@@ -13,44 +13,40 @@ btnCloseHamburger.addEventListener('click', (e) => {
     menuHiddent.classList.remove('menu-hamburger')
 })
 
-// Productos
-const productos = [
-    {
-        nombre: 'Vestido de Fiesta Verde con Abertura',
-        precio: 98000,
-        imagen: 'imagenes/1.jpg'
-    },
-    {
-        nombre: 'Camisa Casual Azul',
-        precio: 75000,
-        imagen: 'imagenes/2.jpg'
-    },
-    {
-        nombre: 'Camisa Casual Azul',
-        precio: 75000,
-        imagen: 'imagenes/3.jpg'
-    },
-    {
-        nombre: 'Camisa Casual Azul',
-        precio: 75000,
-        imagen: 'imagenes/4.jpg'
-    },
-    {
-        nombre: 'Camisa Casual Azul',
-        precio: 75000,
-        imagen: 'imagenes/5.jpg'
-    },
-    {
-        nombre: 'Camisa Casual Azul',
-        precio: 75000,
-        imagen: 'imagenes/6.jpg'
-    },
-    {
-        nombre: 'Camisa Casual Azul',
-        precio: 75000,
-        imagen: 'imagenes/7.jpg'
-    },
-];
+function transformarProducto(item) {
+    return {
+      nombre: item.title,
+      precio: item.price,
+      imagen: item.image
+    };
+}
+
+function transformarProducto(item) {
+    return {
+        nombre: item.title,
+        precio: item.price,
+        imagen: item.image
+    };
+}
+
+let productos = [];
+
+Promise.all([
+    fetch("https://fakestoreapi.com/products/category/women's clothing?limit=10")
+        .then(res => res.json()),
+    fetch("https://fakestoreapi.com/products/category/men's clothing?limit=10")
+        .then(res => res.json())
+])
+.then(([mujeresData, hombresData]) => {
+    const productosMujeres = mujeresData.map(transformarProducto);
+    const productosHombres = hombresData.map(transformarProducto);
+
+    productos = productosMujeres.concat(productosHombres);
+    cargarProductos();
+})
+.catch(error => {
+    console.error("Error al obtener los productos:", error);
+});
 
 // Función para formatear el precio en pesos colombianos
 function formatearPrecio(precio) {
@@ -60,7 +56,7 @@ function formatearPrecio(precio) {
     }).format(precio);
 }
 
-// Función para añadir productos al contenedor
+// Actualizar Productos
 function cargarProductos() {
     const contenedor = document.querySelector('.popular-products__container');
 
@@ -101,7 +97,6 @@ function cargarProductos() {
         viewLink.textContent = 'VER PRODUCTO';
         viewDiv.appendChild(viewLink);
 
-        // Estructurar elementos
         figura.appendChild(img);
         acciones.appendChild(addToCartDiv);
         acciones.appendChild(viewDiv);
@@ -115,9 +110,6 @@ function cargarProductos() {
     });
 }
 
-// Función simulada para añadir al carrito
 function addToCart(producto) {
     alert(`Producto añadido: ${producto.nombre} - ${formatearPrecio(producto.precio)}`);
 }
-
-document.addEventListener('DOMContentLoaded', cargarProductos);
